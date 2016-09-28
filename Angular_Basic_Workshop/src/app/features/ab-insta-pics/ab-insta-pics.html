@@ -1,0 +1,25 @@
+<div layout="vertical">
+  <md-content layout-fill>
+    <header>
+
+      <ab-navbar 
+          creation-date="vm.pageData.creationDate" 
+          brand="vm.pageData.brand" 
+          paths="vm.pageData.paths">
+      </ab-navbar>
+
+    </header>   
+    <div class="mdl-layout  mdl-js-layout background-grey">
+      <main class="mdl-layout__content"> 
+        <div class="mdl-grid">
+          <md-card class="mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone" 
+                ng-repeat="picture in vm.pageData.pictures">  
+    
+            <ab-picture picture="picture"></ab-picture>
+
+          </md-card>
+        </div>
+      </main>
+    </div>
+  </md-content>
+</div>
